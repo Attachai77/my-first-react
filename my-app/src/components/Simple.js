@@ -17,15 +17,10 @@ class Simple extends Component {
         setTimeout(() => {
             this.setState({
                 brand: "Toyota",
-                model: "Fortuner"
+                model: "Fortuner",
+                count: 2
             })
         }, 5000);
-
-        setInterval(() => {
-            this.setState({
-                count: this.state.count+1
-            })
-        }, 10000);
         
         let myStyle = {
             fontSize: 100,
