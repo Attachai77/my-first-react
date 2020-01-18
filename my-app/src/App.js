@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import logo from './logo.svg';
 import './App.css';
 
 import Simple from './components/Simple'
@@ -10,7 +9,6 @@ function App() {
 
   return (
     <div className="App">
-      <Header/>
       <Simple title="Meaage Simple" year={year} car={car} />
     </div>
   );
@@ -18,16 +16,4 @@ function App() {
 
 
 export default App;
-
-
-
-export class Header extends Component {
-  render() {
-    return (
-      <div>
-        <h2>Header</h2>
-      </div>
-    )
-  }
-}
 
