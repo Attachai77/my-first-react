@@ -1,29 +1,33 @@
-import React from 'react';
+import React, { Component } from 'react'
 import logo from './logo.svg';
 import './App.css';
 
 import Simple from './components/Simple'
 
 function App() {
+  const year = 2020
+  const car = {name: "Ford", model: "Mustang"}
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      <Simple></Simple>
+      <Header/>
+      <Simple title="Meaage Simple" year={year} car={car} />
     </div>
   );
 }
 
+
 export default App;
+
+
+
+export class Header extends Component {
+  render() {
+    return (
+      <div>
+        <h2>Header</h2>
+      </div>
+    )
+  }
+}
+

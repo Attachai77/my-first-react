@@ -10,6 +10,9 @@ class Simple extends Component {
         return (
             <div>
                 <h2 style={myStyle} >Simple</h2>
+                <p>{this.props.title}</p>
+                <p>{this.props.year}</p>
+                <p>{this.props.car.name} / {this.props.car.model}</p>
             </div>
         )
     }
