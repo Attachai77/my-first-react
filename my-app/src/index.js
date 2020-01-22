@@ -13,6 +13,7 @@ import {
 import App from './App';
 import Contact from './view/Contact'
 import Clock from './view/Clock'
+import Gallery from './view/Gallery'
 
 const RoutedApp = () => (
     <BrowserRouter >
@@ -20,6 +21,7 @@ const RoutedApp = () => (
         <Route exact path="/" component={App} />
         <Route path="/contact" component={Contact} />
         <Route path="/clock" component={Clock} />
+        <Route path="/gallery" component={Gallery} />
       </Switch>
     </BrowserRouter>
 );
