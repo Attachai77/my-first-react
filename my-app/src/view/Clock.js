@@ -36,6 +36,7 @@ class Clock extends Component {
             <div>
                 <h1>Hello, world!</h1>
                 <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+                <FormattedDate date={this.state.date} />
             
                 {/* Route Link */}
                 <Link to="/">Home</Link><br/>
@@ -65,6 +66,10 @@ class Clock extends Component {
             1000
         )
     }
+}
+
+function FormattedDate(props) {
+    return <h2> >>> It is {props.date.toLocaleTimeString()}. >>>>> </h2>;
 }
 
 export default Clock
