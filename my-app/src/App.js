@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import './App.css';
 
 import Simple from './components/Simple'
+import {
+  Link
+} from "react-router-dom";
 
 
 class App extends Component {
@@ -61,9 +64,26 @@ class App extends Component {
         <input type="text" onChange={this.onChangeInput.bind(this) } />
         <h4>type : {this.state.inputDate}</h4>
 
+        {/* Route Link */}
+        <Link to="/contact">Contact</Link><br/>
+        <Link to="/clock">Clock</Link>
+
       </div>
     );
   }
+}
+
+
+function Home() {
+  return <h2>Home</h2>;
+}
+
+function About() {
+  return <h2>About</h2>;
+}
+
+function Users() {
+  return <h2>Users</h2>;
 }
 
 export default App
