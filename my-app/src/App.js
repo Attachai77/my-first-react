@@ -10,7 +10,7 @@ class App extends Component {
     this.state = {
       data:[],
       message: 'Unlike',
-      type: false
+      inputDate: ''
     }
 
     this.changeMesage = this.changeMesage.bind(this)
@@ -25,7 +25,6 @@ class App extends Component {
   }
 
   insertData(){
-    alert('jjjj')
     let data = this.state.data
     data.push("new data" + Date.now() )
     this.setState({
@@ -33,12 +32,17 @@ class App extends Component {
     })
   }
 
+  onChangeInput(event){
+    this.setState({
+      inputDate: event.target.value
+    })
+  }
+
   render() {
     const year = 2020
     const car = {name: "Ford", model: "Mustang"}
-    
     const items = []
-    for (const [index, value] of this.state.data.entries()) {
+    for (const [index, value] of this.state.data.entries() ) {
       items.push(<li key={index}>{value}</li>)
     }
 
@@ -50,8 +54,13 @@ class App extends Component {
         <button type="button" onClick={this.changeMesage}> {this.state.message} </button>
         <button type="button" onClick={this.insertData}> Add Data </button>
 
-        
+        <h5>{this.state.data}</h5>        
         {items}
+
+        {/* onChange Event */}
+        <input type="text" onChange={this.onChangeInput.bind(this) } />
+        <h4>type : {this.state.inputDate}</h4>
+
       </div>
     );
   }
