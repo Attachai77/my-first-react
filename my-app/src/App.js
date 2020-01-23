@@ -67,7 +67,8 @@ class App extends Component {
         {/* Route Link */}
         <Link to="/contact">Contact</Link><br/>
         <Link to="/clock">Clock</Link><br/>
-        <Link to="/gallery">Gallery</Link>
+        <Link to="/gallery">Gallery</Link><br/>
+        <Link to="/form">Form</Link>
 
       </div>
     );

@@ -14,6 +14,7 @@ import App from './App';
 import Contact from './view/Contact'
 import Clock from './view/Clock'
 import Gallery from './view/Gallery'
+import Form from './view/Form'
 
 const RoutedApp = () => (
     <BrowserRouter >
@@ -22,6 +23,7 @@ const RoutedApp = () => (
         <Route path="/contact" component={Contact} />
         <Route path="/clock" component={Clock} />
         <Route path="/gallery" component={Gallery} />
+        <Route path="/form" component={Form} />
       </Switch>
     </BrowserRouter>
 );
